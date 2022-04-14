@@ -26,10 +26,5 @@ module.exports = defineConfig({
     config.resolve.alias
       .set('@', resolve('src'))
       .set('@assets', resolve('src/assets'));
-    // config.plugin('html')
-    //   .tap( options => [{
-    //     template: 'public/index.html',
-    //     title: 'vue3-cli',
-    //   }])
   }
 })

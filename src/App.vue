@@ -26,9 +26,12 @@ export default {
 }
 
 nav {
-  margin-top: 30px;
+  position: sticky;
+  top: 0;
   padding: 30px;
   font-size: 20px;
+  background-color: #fff;
+  z-index: 99;
 }
 
 nav a {

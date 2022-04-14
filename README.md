@@ -10,15 +10,21 @@ npm install
 npm run serve
 ```
 
-### 涉及
-1. vue-cli
-2. vue-router
-3. vuex
-4. vant
-5. normalize.css
-6. less
-7. 环境变量 beta 配置
-8. 设置别名 alias
+### List
+- [x] vue-cli
+- [x] vue-router
+- [x] vuex
+- [x] vant
+- [x] normalize.css
+- [x] less 及全局配置
+- [x] 环境变量 beta 配置
+- [x] 设置别名 alias
+- [ ] 基础页面模板
+- [ ] Axios
+- [ ] 第三方图标引入
+- [ ] 本地开发代理
+- [ ] 页面缓存 keep-alive 示例
+- [ ] ...
 
 ### Compiles and minifies for production
 ```
