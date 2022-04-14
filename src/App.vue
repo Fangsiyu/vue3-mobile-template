@@ -22,11 +22,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-size: 14px;
 }
 
 nav {
   margin-top: 30px;
   padding: 30px;
+  font-size: 20px;
 }
 
 nav a {

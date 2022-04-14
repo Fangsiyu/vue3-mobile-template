@@ -17,6 +17,7 @@ npm run serve
 4.vant
 5.normalize.css
 6.less
+7.环境变量 beta 配置
 
 ### Compiles and minifies for production
 ```
