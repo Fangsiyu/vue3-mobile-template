@@ -1,5 +1,9 @@
 const { defineConfig } = require('@vue/cli-service')
-// const path = require('path')
+const path = require('path')
+
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
 
 module.exports = defineConfig({
   publicPath: './',
@@ -7,20 +11,14 @@ module.exports = defineConfig({
   devServer: {
     // proxy: 'http://localhost:4000'
   },
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: [resolve('./src/assets/less/index.less')]
+    }
+  },
   configureWebpack: {
     plugins: [
     ]
   },
-  css: {
-    loaderOptions: {
-      // less: {
-      //   javascriptEnabled: true,
-      //   // http://lesscss.org/usage/#less-options-strict-units `Global Variables`
-      //   // `primary` is global variables fields name
-      //   globalVars: {
-      //     primary: '#42b983'
-      //   }
-      // }
-    }
-  }
 })

@@ -25,9 +25,10 @@ export default {
 };
 </script>
 <style scope lang="less">
-@primary: #42b983;
+// @primary: #42b983;
 h2{
   font-size: 30px;
+  font-weight: bold;
   color: @primary;
 }
   
