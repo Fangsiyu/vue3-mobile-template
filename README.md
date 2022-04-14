@@ -11,14 +11,14 @@ npm run serve
 ```
 
 ### 涉及
-1.vue-cli
-2.vue-router
-3.vuex
-4.vant
-5.normalize.css
-6.less
-7.环境变量 beta 配置
-8.设置别名 alias
+1. vue-cli
+2. vue-router
+3. vuex
+4. vant
+5. normalize.css
+6. less
+7. 环境变量 beta 配置
+8. 设置别名 alias
 
 ### Compiles and minifies for production
 ```
