@@ -18,6 +18,7 @@ npm run serve
 5.normalize.css
 6.less
 7.环境变量 beta 配置
+8.设置别名 alias
 
 ### Compiles and minifies for production
 ```
