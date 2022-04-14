@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <img alt="Vue logo" src="@assets/logo.png" />
     <h2>Vant UI</h2>
     <br />
     <van-button type="primary">主要按钮</van-button>
