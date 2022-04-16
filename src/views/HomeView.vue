@@ -9,6 +9,13 @@
       <van-button type="warning" size="small">警告按钮</van-button>
       <van-button type="danger" size="small">危险按钮</van-button>
     </div>
+    <div class="btns">
+      <van-button @click="getData" type="primary" size="small">模拟请求</van-button>
+    </div>
+    <div class="btns">
+      返回结果：{{ result }} <br>
+     error: {{ result2 }}
+    </div>
 
     <br />
     <div class="song">
@@ -20,12 +27,36 @@
 
 <script>
 // @ is an alias to /src
+import { ref } from "vue";
 import HelloWorld from "@/components/HelloWorld.vue";
+import { getDataOne } from "@api/data"
 
 export default {
   name: "HomeView",
   components: {
     HelloWorld,
+  },
+  setup() {
+    const data = ref({});
+    const result = ref({});
+    const result2 = ref({});
+    const getData = async () => {
+      // const res = await getDataOne();
+      // console.log(res,'res')
+      // result.value = res;
+      getDataOne().then(res => {
+        result.value = res;
+      }).catch(err => {
+        console.log(err,'err')
+        result2.value = err;
+      })
+    };
+    return {
+      data,
+      result,
+      result2,
+      getData,
+    };
   },
 };
 </script>
@@ -42,6 +73,7 @@ h2 {
 .btns{
   display: flex;
   justify-content: space-around;
+  margin-top: 20px;
 }
 .song {
   margin: 20px auto;
