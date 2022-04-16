@@ -19,8 +19,8 @@ npm run serve
 - [x] less 及全局配置
 - [x] 环境变量 beta 配置
 - [x] 设置别名 alias
-- [ ] 基础页面模板
-- [x] Axios
+- [x] 基础页面模板 参考 about.vue
+- [x] Axios 及 API Demo
 - [ ] 第三方图标引入
 - [ ] 本地开发代理
 - [ ] 页面缓存 keep-alive 示例
