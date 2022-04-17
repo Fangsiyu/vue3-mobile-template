@@ -10,7 +10,18 @@ module.exports = defineConfig({
     port: 8090,
     host: '0.0.0.0',
     https: false,
-    open: false
+    open: false,
+    proxy: {
+      '/api': {
+        target: '<url>',
+        ws: true,
+        changeOrigin: true,
+        pathRewrite: {'^/api' : '/new/api'}
+      },
+      '/foo': {
+        target: '<other_url>'
+      }
+    }
   },
   pluginOptions: {
     'style-resources-loader': {
