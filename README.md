@@ -21,7 +21,7 @@ npm run serve
 - [x] 设置别名 alias
 - [x] 基础页面模板 参考 about.vue
 - [x] Axios 及 API Demo
-- [ ] 第三方图标引入
+- [x] 第三方图标引入 icon-park
 - [ ] 本地开发代理
 - [ ] 页面缓存 keep-alive 示例
 - [ ] ...

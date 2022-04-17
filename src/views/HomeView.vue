@@ -2,6 +2,10 @@
   <div class="home">
     <img alt="Vue logo" src="@assets/logo.png" />
     <h2>Vant UI</h2>
+    <!-- <home theme="filled" /> -->
+    <!-- <i-home theme="filled" /> -->
+    <game-ps theme="two-tone" size="28" :fill="['#9013fe' ,'#2F88FF']"/>
+    
     <br />
     <div class="btns">
       <van-button type="primary" size="small">主要按钮</van-button>
@@ -10,11 +14,13 @@
       <van-button type="danger" size="small">危险按钮</van-button>
     </div>
     <div class="btns">
-      <van-button @click="getData" type="primary" size="small">模拟请求</van-button>
+      <van-button @click="getData" type="primary" size="small"
+        >模拟请求</van-button
+      >
     </div>
     <div class="btns">
-      返回结果：{{ result }} <br>
-     error: {{ result2 }}
+      返回结果：{{ result }} <br />
+      error: {{ result2 }}
     </div>
 
     <br />
@@ -29,12 +35,15 @@
 // @ is an alias to /src
 import { ref } from "vue";
 import HelloWorld from "@/components/HelloWorld.vue";
-import { getDataOne } from "@api/data"
+import { getDataOne } from "@api/data";
+import {GamePs} from '@icon-park/vue-next';
+
 
 export default {
   name: "HomeView",
   components: {
     HelloWorld,
+    GamePs,
   },
   setup() {
     const data = ref({});
@@ -44,12 +53,14 @@ export default {
       // const res = await getDataOne();
       // console.log(res,'res')
       // result.value = res;
-      getDataOne().then(res => {
-        result.value = res;
-      }).catch(err => {
-        console.log(err,'err')
-        result2.value = err;
-      })
+      getDataOne()
+        .then((res) => {
+          result.value = res;
+        })
+        .catch((err) => {
+          console.log(err, "err");
+          result2.value = err;
+        });
     };
     return {
       data,
@@ -61,7 +72,7 @@ export default {
 };
 </script>
 <style scoped lang="less">
-.home{
+.home {
   padding: 20px;
 }
 // @primary: #42b983;
@@ -70,7 +81,7 @@ h2 {
   font-weight: bold;
   color: @primary;
 }
-.btns{
+.btns {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
