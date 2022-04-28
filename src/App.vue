@@ -1,17 +1,30 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/list">List</router-link>
   </nav>
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <keep-alive>
+      <component
+        :key="$route.name"
+        :is="Component"
+        v-if="$route.meta.keepAlive"
+      />
+    </keep-alive>
+    <component
+      :key="$route.name"
+      :is="Component"
+      v-if="!$route.meta.keepAlive"
+    />
+  </router-view>
 </template>
 <script>
 export default {
-  name: 'App',
-  components: {
-  },
+  name: "App",
+  components: {},
   created() {
-    console.log(process.env,'process.env')
+    console.log(process.env, "process.env");
   },
 };
 </script>

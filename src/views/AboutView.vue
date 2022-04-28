@@ -60,6 +60,9 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.about{
+  font-size: 12px;
+}
 .btns {
   display: flex;
   justify-content: space-around;
